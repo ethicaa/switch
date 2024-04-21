@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: beige;
+}
+
+button{
+    background-color: #333;
+    position: relative;
+    width: 140px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+    transition: all 0.3s;
+    border: none;
+}
+
+i{
+    background-color: white;
+    box-shadow: 1px 1px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 69.5%;
+    position: absolute;
+    border: 0.5px solid transparent;
+    padding: 10px 10px;
+    border-radius: 100%;
+    animation: rotate 1s cubic-bezier(0.175,1.82, 0.165, 1) 1;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+i:hover{
+ background-color: #0a0a23;
+ color: white;
+ box-shadow: 4px 1px 10px #0a0a23;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+        left: 0;
+    }
+
+    to{
+        transform: rotate(360deg);
+        left:69.5%;
+    }
+}
+
+
+i.move{
+    padding: 11px 13px;
+    border-radius: 100%;
+    left: 3%;
+    animation: back 0.5s cubic-bezier(.45,.14,.05,.63) 1;
+}
+
+@keyframes back{
+    from{
+        transform: rotate(0deg);
+        left: 77%;
+    }
+
+    to{
+        transform: rotate(360deg);
+        left: 0;
+    }
+}
